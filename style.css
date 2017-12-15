@@ -200,5 +200,38 @@ footer {
   color: #fff;
 }
 
+/* スマホだけに適用するCSS */
+@media screen and (max-width: 479px) {
+  /* 変更点のみを記述する */
+  .social {
+    visibility: hidden;
+  }
+
+  .nav-list-item {
+    list-style: none;
+    display: block;
+    margin: 0 20px;
+  }
+
+  #pagination {
+    padding-bottom: 30px;
+  }
+
+  main #pagination .sidebar .blog-box .blog-headline .blog .clearfix{
+    width: 100%;
+  }
+
+  .blog-image {
+    width: 38%;
+  }
+
+  
+  .sidebar {
+    float: none;
+  }
+
+
+}
+
 
 
