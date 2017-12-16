@@ -150,12 +150,12 @@ main {
 .sidebar-contents {
   padding: 50px 0;
 }
-.popular-text, .categoriex-text {
+.popular-text, .categories-text {
   padding-bottom: 5px;
   border-bottom: 1px solid #f7f7f7;
   margin-bottom: 5px;
 }
-.popular-text: last-child, .categories-text:last-child {
+.popular-text: last-child, .categories-text: last-child {
   margin: 0;
   padding: 0;
   border: none;
@@ -200,11 +200,11 @@ footer {
   color: #fff;
 }
 
-/* スマホだけに適用するCSS */
+/* スマホだけに適用するCSS (iPhone7(375×667)でテスト済み) */
 @media screen and (max-width: 479px) {
   /* 変更点のみを記述する */
   .social {
-    visibility: hidden;
+    display: none;
   }
 
   .nav-list-item {
@@ -213,21 +213,44 @@ footer {
     margin: 0 20px;
   }
 
+
+  main, .blog, #pagination, .sidebar, .blog-box, .blog-headline {
+    width: 100%;
+  }
+
+  .main-visual-content {
+    width: 100%;
+  }
+
+  .blog-text {
+    padding-left: 10px;
+    padding-top: 0px;
+  }
+  .blog-image {
+    width: 190px;
+    padding-left: 10px;
+  }
+  /* スマホの表示時にテキストの部分がずれるため必要に応じて改行 */
+  .br::before {
+    content: "\A";
+    white-space: pre;
+  }
   #pagination {
     padding-bottom: 30px;
   }
 
-  main #pagination .sidebar .blog-box .blog-headline .blog .clearfix{
-    width: 100%;
-  }
-
-  .blog-image {
-    width: 38%;
-  }
-
-  
   .sidebar {
     float: none;
+  }
+  .instagram-box {
+    width: 170px;
+    height: 170px;
+  }
+  .instagram-box:nth-child(odd) {
+    margin: 0 15px 15px 0;
+  }
+  .sidebar-contents {
+    margin: 0 10px;
   }
 
 
